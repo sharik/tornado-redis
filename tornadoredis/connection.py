@@ -232,6 +232,7 @@ class ConnectionProxy(object):
         self.pool = weakref.proxy(pool)
         self.ready_callbacks = []
         self._connected = connected
+        self.info = {'db': 0}
 
     def connected(self):
         return self._connected
